@@ -1,0 +1,111 @@
+body {
+  font: 'Poppins';
+}
+
+nav {
+  padding: 1rem;
+  background: #141414;
+  font-size: 2em;
+  color: #fff;
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav strong {
+  color: yellow;
+  font-weight: 900;
+}
+
+nav img {
+  max-height: 100%;
+  max-width: 100%;
+  margin-right: 0.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 6rem);
+  padding: 1rem;
+}
+
+.container h1 {
+  font-weight: normal;
+}
+
+.card {
+  width: 90%;
+  max-width: 30rem;
+  border: 1px solid #e7e7e7;
+  /* background: #e7e7e7; */
+  box-shadow: 0 0 20px 0 #e7e7e7;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.card h1 {
+  margin: 0 0 2rem 0;
+  color: #222222;
+}
+
+.card button {
+  padding: 0.5rem 1.4rem;
+  margin: 0 0.4rem 0 0;
+  background: #3740ff;
+  color: #fff;
+  border: 1px solid #3740ff;
+  border-radius: 0.2rem;
+  font: inherit;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #6269ee;
+  border: 1px solid #6269ee;
+}
+
+.card button:nth-child(odd) {
+  background: #fff;
+  color: #3740ff;
+  border: 1px solid #e7e7e7;
+}
+
+.card img {
+  width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  display: block;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: blueviolet;
+}
+
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.course .card {
+  margin: 0.3rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: gray;
+}
+
+@media (max-width: 800px) {
+  .course .card {
+    min-width: 90%;
+  }
+}
