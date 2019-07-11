@@ -27,7 +27,7 @@ const courses = [
     thumbnail: 'https://i.udemycdn.com/course/480x270/1501104_967d_11.jpg',
   },
   {
-    id: 5,
+    id: 4,
     name: 'Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)',
     udemy_url:
       'https://www.udemy.com/complete-react-developer-zero-to-mastery/',
