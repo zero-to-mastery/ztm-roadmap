@@ -61,9 +61,11 @@ nav img {
   font: inherit;
   transition: 0.3s ease all;
   cursor: pointer;
+  transition: transform 0.2s ease-out;
 }
 
 .card button:hover {
+  transform: scale(1.1);
   background: #6269ee;
   border: 1px solid #6269ee;
 }
