@@ -38,6 +38,7 @@ class App extends React.Component {
           courses: []
         });
       } else {
+        console.info("Inside if if block");
         this.setState({
           currentQuestion: null,
           courses: [],
@@ -48,6 +49,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div>
         <Nav />
@@ -75,8 +77,8 @@ class App extends React.Component {
           )}
           <div className="course">
             {this.state.courses.map((course, i) => (
-              <div className="card">
-                <img src={course.thumbnail} alt="" />
+              <div className="card" key={i + 11}>
+                <img src={course.thumbnail} alt="" key={i + 8} />
                 <a href={course.udemy_url} key={i}>
                   {course.name}
                 </a>
