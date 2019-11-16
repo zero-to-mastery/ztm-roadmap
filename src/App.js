@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import { questions } from './questions';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
+import React from "react";
+import "./App.css";
+import { questions } from "./questions";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor() {
@@ -11,38 +11,38 @@ class App extends React.Component {
     this.state = {
       currentQuestion: questions[0],
       courses: [],
-      isImpossibleToPlease: false,
+      isImpossibleToPlease: false
     };
   }
 
   changeQuestion(question, userAnswer) {
     if (!question instanceof Object) {
-      return console.log('Not a Question Object');
+      return console.log("Not a Question Object");
     }
     if (userAnswer) {
       if (this.state.currentQuestion.truth !== null) {
         this.setState({
           currentQuestion: questions[this.state.currentQuestion.truth],
-          courses: [],
+          courses: []
         });
       } else {
         this.setState({
           currentQuestion: null,
-          courses: this.state.currentQuestion.course,
+          courses: this.state.currentQuestion.course
         });
       }
     } else {
       if (this.state.currentQuestion.false) {
         this.setState({
           currentQuestion: questions[this.state.currentQuestion.false],
-          courses: [],
+          courses: []
         });
       } else {
-        console.info('Inside if if block');
+        console.info("Inside if if block");
         this.setState({
           currentQuestion: null,
           courses: [],
-          isImpossibleToPlease: true,
+          isImpossibleToPlease: true
         });
       }
     }
@@ -73,12 +73,12 @@ class App extends React.Component {
               </button>
             </div>
           ) : (
-            ''
+            ""
           )}
           <div className="course">
             {this.state.courses.map((course, i) => (
-              <div className="card">
-                <img src={course.thumbnail} alt="" />
+              <div className="card" key={i + 11}>
+                <img src={course.thumbnail} alt="" key={i + 8} />
                 <a href={course.udemy_url} key={i}>
                   {course.name}
                 </a>
@@ -90,7 +90,7 @@ class App extends React.Component {
               I gave up! You are imposible to please! Have a Great Day ahead!
             </h1>
           ) : (
-            ''
+            ""
           )}
         </div>
         <Footer />
